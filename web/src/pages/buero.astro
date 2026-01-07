@@ -1,0 +1,189 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import ImageCarousel from '../components/react/ImageCarousel';
+
+const seo = {
+  title: 'Das Büro | Dr.-Ing. Formazin & Partner',
+  description: 'Seit 1990 steht unser Name in Ahrensfelde und Berlin für Ingenieurskunst mit Handschlagqualität. Lernen Sie unser Team kennen.',
+};
+
+// Team Members
+const team = [
+  {
+    name: 'Dr.-Ing. Karsten Formazin',
+    role: 'Sachverständiger & Geschäftsführer',
+    description: 'Öffentlich bestellter und vereidigter Sachverständiger (IHK Ostbrandenburg). Technische Unanfechtbarkeit und präzise Tragwerksplanung.',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80',
+  },
+  {
+    name: 'Dipl.-Ing. Oda Formazin',
+    role: 'Netzwerkerin & Geschäftsführerin',
+    description: 'Gemeindevertreterin, Kreistag Barnim, Rotary-Club Bernau. Verbindet Menschen, Projekte und Politik.',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80',
+  },
+  {
+    name: 'Frauke Formazin',
+    role: 'Nachfolge-Generation',
+    description: 'Master of Science. Treibt die Digitalisierung voran und verbindet Tradition mit Innovation.',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80',
+  },
+  {
+    name: 'Feith Formazin',
+    role: 'Nachfolge-Generation',
+    description: 'Von der Maurerkelle zum Master. Praktisches Handwerk trifft auf moderne Ingenieurskunst.',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80',
+  },
+];
+
+// Work Atmosphere Images
+const workImages = [
+  {
+    src: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80',
+    alt: 'Team Meeting',
+    caption: 'Planung im Team'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80',
+    alt: 'Architects working',
+    caption: 'Technische Zeichnungen'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&q=80',
+    alt: 'Construction site visit',
+    caption: 'Vor Ort auf der Baustelle'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80',
+    alt: 'Office workspace',
+    caption: 'Büroalltag in Ahrensfelde'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80',
+    alt: 'Engineering work',
+    caption: 'Statische Berechnungen'
+  },
+];
+---
+
+<Layout title={seo.title} description={seo.description}>
+  <!-- Hero: Group Image + Headline -->
+  <section class="relative w-full">
+    <!-- Group Image -->
+    <div class="w-full h-[60vh] lg:h-[70vh] bg-gray-300 relative overflow-hidden">
+      <img 
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=2000&q=80" 
+        alt="Team Dr.-Ing. Formazin & Partner"
+        class="w-full h-full object-cover"
+      />
+      <!-- Gradient Overlay for Text Readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+      
+      <!-- Headline Overlay -->
+      <div class="absolute bottom-0 left-0 right-0 px-6 lg:px-8 pb-12 lg:pb-16">
+        <div class="max-w-7xl mx-auto">
+          <h1 class="font-['Archivo'] font-bold text-5xl lg:text-7xl text-white mb-4">
+            Ingenieurskunst.<br />In Familie.
+          </h1>
+          <p class="font-['Archivo'] text-xl lg:text-2xl text-white/90 max-w-2xl">
+            Seit 1990 steht unser Name für technische Exzellenz und persönliche Verlässlichkeit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Grid: 4 Team Members -->
+  <section class="bg-white py-20 lg:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="mb-16">
+        <h2 class="font-['Archivo'] text-sm uppercase tracking-wider text-gray-500 mb-4">
+          Das Team
+        </h2>
+        <p class="font-['Archivo'] text-2xl text-gray-900">
+          Zwei Generationen. Eine Vision.
+        </p>
+      </div>
+
+      <!-- Grid: 2x2 on Desktop, 1 Column on Mobile -->
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+        {team.map((member) => (
+          <div class="group">
+            <!-- Portrait Image -->
+            <div class="aspect-[3/4] bg-gray-200 mb-6 overflow-hidden">
+              <img 
+                src={member.image}
+                alt={member.name}
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            
+            <!-- Text Content -->
+            <div class="space-y-3">
+              <h3 class="font-['Archivo'] font-bold text-2xl lg:text-3xl text-gray-900">
+                {member.name}
+              </h3>
+              <p class="font-['Archivo_Narrow'] text-base uppercase tracking-wide text-gray-500">
+                {member.role}
+              </p>
+              <p class="font-['Archivo'] text-base leading-relaxed text-gray-700">
+                {member.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="bg-[#F0F2F5] py-20 lg:py-32">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="space-y-12">
+        <div>
+          <h2 class="font-['Archivo'] text-sm uppercase tracking-wider text-gray-500 mb-4">
+            Unsere Haltung
+          </h2>
+          <p class="font-['Archivo'] font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+            „Geiht nich – gifft nich."
+          </p>
+          <p class="font-['Archivo'] text-xl leading-relaxed text-gray-700 max-w-3xl">
+            Was als Partnerschaft begann, wächst nun in die nächste Generation. 
+            Tradition wahren. Digitalisierung vorantreiben. Handwerkliches Wissen 
+            mit moderner Technologie verbinden.
+          </p>
+        </div>
+
+        <!-- Key Facts -->
+        <div class="grid md:grid-cols-3 gap-8 pt-8 border-t border-gray-300">
+          <div>
+            <div class="font-['Archivo'] font-bold text-5xl text-gray-900 mb-2">1990</div>
+            <p class="font-['Archivo_Narrow'] text-sm uppercase tracking-wide text-gray-600">
+              Gründungsjahr
+            </p>
+          </div>
+          <div>
+            <div class="font-['Archivo'] font-bold text-5xl text-gray-900 mb-2">2</div>
+            <p class="font-['Archivo_Narrow'] text-sm uppercase tracking-wide text-gray-600">
+              Generationen
+            </p>
+          </div>
+          <div>
+            <div class="font-['Archivo'] font-bold text-5xl text-gray-900 mb-2">∞</div>
+            <p class="font-['Archivo_Narrow'] text-sm uppercase tracking-wide text-gray-600">
+              Projekte realisiert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Atmosphere Carousel -->
+  <section class="bg-white py-20 lg:py-32">
+    <ImageCarousel images={workImages} client:load />
+  </section>
+
+  <Footer />
+</Layout>

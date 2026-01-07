@@ -1,0 +1,71 @@
+---
+// Team-Sektion: Die Köpfe des Büros
+
+const teamMembers = [
+  {
+    name: "Dr.-Ing. Oda Formazin",
+    role: "Geschäftsführende Gesellschafterin",
+    specialization: "Netzwerk & Politik",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+  },
+  {
+    name: "Karsten Formazin",
+    role: "Geschäftsführender Gesellschafter",
+    specialization: "Tragwerksplanung",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
+  },
+  {
+    name: "Nachfolge-Team",
+    role: "Projektleitung",
+    specialization: "Digitale Transformation",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80"
+  }
+];
+---
+
+<section class="bg-gray-50 py-24 lg:py-32">
+  <div class="max-w-din mx-auto px-6 lg:px-12">
+    <!-- Section Header -->
+    <div class="mb-16 lg:mb-20">
+      <h2 class="font-bold text-4xl lg:text-5xl text-construction-grey mb-4">
+        Die Köpfe
+      </h2>
+      <p class="font-narrow text-lg uppercase tracking-wide text-signal-grey">
+        Erfahrung trifft Innovation
+      </p>
+    </div>
+
+    <!-- Team Grid (3 Spalten, rechteckige Portraits) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+      {teamMembers.map((member) => (
+        <div class="group">
+          <!-- Portrait (3:4 Hochformat, NICHT rund) -->
+          <div class="aspect-[3/4] bg-white mb-6 overflow-hidden relative">
+            <img 
+              src={member.image} 
+              alt={member.name}
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+            />
+            <!-- DIN-Rand -->
+            <div class="absolute inset-0 border border-signal-grey pointer-events-none"></div>
+          </div>
+
+          <!-- Info (linksbündig, wie Legende) -->
+          <div class="space-y-2">
+            <h3 class="font-bold text-xl text-construction-grey">
+              {member.name}
+            </h3>
+            <p class="font-narrow text-sm uppercase tracking-wide text-signal-grey">
+              {member.role}
+            </p>
+            {member.specialization && (
+              <p class="text-sm text-din-blue font-semibold">
+                {member.specialization}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

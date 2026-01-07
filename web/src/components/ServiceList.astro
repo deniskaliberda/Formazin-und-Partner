@@ -1,0 +1,68 @@
+---
+// ServiceList: Technisches Leistungsverzeichnis
+
+const services = [
+  {
+    number: "01",
+    title: "Generalplanung",
+    description: "Koordination aller Fachdisziplinen. Ein Ansprechpartner für das gesamte Bauvorhaben. Kosten-, Termin- und Qualitätskontrolle nach HOAI.",
+    keywords: "Generalplaner Berlin Brandenburg"
+  },
+  {
+    number: "02",
+    title: "Architektur & Entwurf",
+    description: "Objektplanung für Gebäude und Innenräume. Von der ersten Skizze bis zur Ausführungsplanung. Schwerpunkt: Wohnungsbau und öffentliche Bauten.",
+    keywords: "Architekturbüro Ahrensfelde"
+  },
+  {
+    number: "03",
+    title: "Tragwerksplanung (Statik)",
+    description: "Erstellung von statischen Berechnungen. Konstruktiver Ingenieurbau. Wirtschaftliche Bemessung von Stahlbeton-, Stahl- und Holztragwerken.",
+    keywords: "Statik Tragwerksplanung"
+  },
+  {
+    number: "04",
+    title: "Brandschutz & Bauphysik",
+    description: "Nachweise für Wärmeschutz und Schallschutz. Erstellung von Brandschutzkonzepten für Sonderbauten. Expertise Dr. Formazin.",
+    keywords: "Brandschutzkonzept Bauphysik"
+  },
+  {
+    number: "05",
+    title: "Gutachten & Sachverständigenwesen",
+    description: "Dr.-Ing. Karsten Formazin ist öffentlich bestellter und vereidigter Sachverständiger für Schäden an Gebäuden. Gerichtsgutachten, Beweissicherung, Sanierungskonzepte.",
+    keywords: "Sachverständiger Gebäudeschäden"
+  }
+];
+---
+
+<div class="space-y-0">
+  {services.map((service, index) => (
+    <div 
+      class={`grid grid-cols-[auto_1fr] md:grid-cols-[120px_200px_1fr] gap-6 lg:gap-12 py-8 lg:py-12 ${
+        index !== services.length - 1 ? 'border-b border-gray-300' : ''
+      }`}
+    >
+      <!-- Nummer (Links, groß und grau) -->
+      <div class="font-narrow text-5xl lg:text-6xl text-signal-grey font-bold">
+        {service.number}
+      </div>
+
+      <!-- Titel (Bold, Schwarz) -->
+      <div class="font-bold text-2xl lg:text-3xl text-construction-grey self-start">
+        {service.title}
+      </div>
+
+      <!-- Beschreibung (Rechts, gut lesbar) -->
+      <div class="col-span-2 md:col-span-1 space-y-4">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          {service.description}
+        </p>
+        
+        <!-- SEO Keywords (dezent) -->
+        <p class="font-narrow text-xs uppercase tracking-wider text-signal-grey">
+          {service.keywords}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,123 @@
+---
+// Footer: Das schwere Fundament
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-white py-16 lg:py-20">
+  <div class="max-w-din mx-auto px-6 lg:px-12">
+    <div class="grid md:grid-cols-4 gap-12 lg:gap-16 mb-12">
+      <!-- Spalte 1: Kontakt -->
+      <div class="space-y-4">
+        <h3 class="font-bold text-lg uppercase tracking-wide mb-6">
+          Kontakt
+        </h3>
+        
+        <address class="not-italic space-y-3 text-gray-300">
+          <p class="font-semibold text-white">
+            Dr.-Ing. Formazin & Partner mbB
+          </p>
+          <p>
+            Dorfstraße 1A<br />
+            16356 Ahrensfelde
+          </p>
+          <p class="pt-2">
+            <a href="tel:+493093691700" class="hover:text-din-blue-100 transition-colors">
+              030 / 93 69 17 0
+            </a>
+          </p>
+          <p>
+            <a href="mailto:kontakt@formazin-partner.de" class="hover:text-din-blue-100 transition-colors">
+              kontakt@formazin-partner.de
+            </a>
+          </p>
+        </address>
+      </div>
+
+      <!-- Spalte 2: Service für Auftraggeber -->
+      <div class="space-y-4">
+        <h3 class="font-bold text-lg uppercase tracking-wide mb-6">
+          Service
+        </h3>
+        
+        <nav class="space-y-3">
+          <a href="/downloads/freistellungsbescheinigung.pdf" class="group block text-gray-300 hover:text-white transition-colors" download>
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Freistellungsbescheinigung
+            </span>
+          </a>
+          <a href="/downloads/versicherungsnachweis.pdf" class="group block text-gray-300 hover:text-white transition-colors" download>
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Versicherungsnachweis
+            </span>
+          </a>
+          <a href="/downloads/betriebshaftpflicht.pdf" class="group block text-gray-300 hover:text-white transition-colors" download>
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Betriebshaftpflicht
+            </span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Spalte 3: Rechtliches -->
+      <div class="space-y-4">
+        <h3 class="font-bold text-lg uppercase tracking-wide mb-6">
+          Rechtliches
+        </h3>
+        
+        <nav class="space-y-3">
+          <a href="/impressum" class="block text-gray-300 hover:text-white transition-colors">
+            Impressum
+          </a>
+          <a href="/datenschutz" class="block text-gray-300 hover:text-white transition-colors">
+            Datenschutz
+          </a>
+        </nav>
+      </div>
+
+      <!-- Spalte 4: Navigation -->
+      <div class="space-y-4">
+        <h3 class="font-bold text-lg uppercase tracking-wide mb-6">
+          Navigation
+        </h3>
+        
+        <nav class="space-y-3">
+          <a href="/" class="block text-gray-300 hover:text-white transition-colors">
+            Startseite
+          </a>
+          <a href="/buero" class="block text-gray-300 hover:text-white transition-colors">
+            Büro
+          </a>
+          <a href="/projekte" class="block text-gray-300 hover:text-white transition-colors">
+            Projekte
+          </a>
+          <a href="/leistungen" class="block text-gray-300 hover:text-white transition-colors">
+            Leistungen
+          </a>
+          <a href="/kontakt" class="block text-gray-300 hover:text-white transition-colors">
+            Kontakt
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Untere Zeile: Copyright & Logo/Claim -->
+    <div class="pt-12 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-narrow text-sm text-gray-400">
+        © {currentYear} Dr.-Ing. Formazin & Partner mbB. Alle Rechte vorbehalten.
+      </p>
+      
+      <p class="font-narrow text-xs uppercase tracking-wider text-gray-500">
+        Geiht nich – gifft nich!
+      </p>
+    </div>
+  </div>
+</footer>

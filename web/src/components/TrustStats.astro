@@ -1,0 +1,45 @@
+---
+// Trust Stats: Zeigt Vertrauenswürdigkeit durch Fakten
+const stats = [
+  {
+    value: '35+',
+    label: 'Jahre Erfahrung',
+    description: 'Seit 1990 in Ahrensfelde'
+  },
+  {
+    value: '400+',
+    label: 'Projekte realisiert',
+    description: 'Von Einfamilienhaus bis Großprojekt'
+  },
+  {
+    value: '2',
+    label: 'Generationen',
+    description: 'Ein Team. Eine Vision.'
+  }
+];
+---
+
+<section class="bg-white py-16 lg:py-20 border-y border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
+      {stats.map((stat) => (
+        <div class="text-center">
+          <!-- Große Zahl -->
+          <div class="font-['Archivo_Black'] text-6xl lg:text-7xl text-[#0066CC] mb-3">
+            {stat.value}
+          </div>
+          
+          <!-- Label -->
+          <div class="font-['Archivo'] font-bold text-lg lg:text-xl text-gray-900 mb-2">
+            {stat.label}
+          </div>
+          
+          <!-- Description -->
+          <p class="font-['Archivo_Narrow'] text-sm text-gray-600">
+            {stat.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

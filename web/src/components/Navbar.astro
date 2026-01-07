@@ -1,0 +1,79 @@
+---
+const navItems = [
+  { label: 'Startseite', href: '/' },
+  { label: 'Büro', href: '/buero' },
+  { label: 'Projekte', href: '/projekte' },
+  { label: 'Leistungen', href: '/leistungen' },
+  { label: 'Kontakt', href: '/kontakt' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="sticky top-0 z-50 bg-[#F0F2F5] border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="font-['Archivo'] font-bold text-xl text-gray-900 hover:text-gray-700 transition-colors">
+        Dr.-Ing. Formazin & Partner
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              "font-['Archivo_Narrow'] uppercase text-sm tracking-wide transition-colors",
+              currentPath === item.href
+                ? 'text-gray-900 font-semibold'
+                : 'text-gray-600 hover:text-gray-900'
+            ]}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden p-2 text-gray-600 hover:text-gray-900"
+        aria-label="Menü öffnen"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200">
+    <div class="px-6 py-4 space-y-3">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            "block font-['Archivo_Narrow'] uppercase text-sm tracking-wide py-2 transition-colors",
+            currentPath === item.href
+              ? 'text-gray-900 font-semibold'
+              : 'text-gray-600 hover:text-gray-900'
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  button?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import ProjectGrid from '../components/react/ProjectGrid';
+
+// Projekte aus der Content Collection laden
+const projects = await getCollection('projects');
+
+// Daten für React-Komponente vorbereiten
+const projectsData = projects.map((project) => ({
+  id: project.id,
+  ...project.data,
+}));
+---
+
+<Layout>
+  <!-- Hero Section für Projekte-Seite -->
+  <section class="bg-paper-white py-24 lg:py-32">
+    <div class="max-w-din mx-auto px-6 lg:px-12">
+      <!-- Page Header (DIN-Stil) -->
+      <div class="mb-16 lg:mb-20">
+        <h1 class="font-bold text-5xl lg:text-6xl text-construction-grey mb-6 leading-tight">
+          Ausgewählte Referenzen
+        </h1>
+        
+        <p class="font-narrow text-xl uppercase tracking-wide text-signal-grey mb-8">
+          Wohnungsbau. Öffentliche Bauten. Gewerbe.
+        </p>
+        
+        <!-- Filter-Buttons (DIN-Stil: wie Reiter auf Akten) -->
+        <div class="flex flex-wrap gap-3">
+          {['Alle', 'Öffentlich', 'Wohnen', 'Sanierung', 'Gewerbe'].map((filter) => (
+            <button
+              class="px-6 py-2 border border-signal-grey text-construction-grey font-narrow text-sm uppercase tracking-wider hover:bg-din-blue hover:text-white hover:border-din-blue transition-all duration-200"
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Grid -->
+  <section class="bg-white py-16 lg:py-24">
+    <div class="max-w-din mx-auto px-6 lg:px-12">
+      <ProjectGrid projects={projectsData} client:load />
+    </div>
+  </section>
+</Layout>

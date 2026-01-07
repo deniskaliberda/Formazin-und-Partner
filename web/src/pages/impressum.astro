@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+const seo = {
+  title: 'Impressum | Dr.-Ing. Formazin & Partner',
+  description: 'Impressum und rechtliche Angaben von Dr.-Ing. Formazin & Partner mbB, Architekten & Beratende Ingenieure in Ahrensfelde.',
+  robots: 'noindex, follow'
+};
+---
+
+<Layout title={seo.title} description={seo.description} robots={seo.robots}>
+  <article class="bg-white py-16 lg:py-24">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <!-- Header -->
+      <header class="mb-12">
+        <h1 class="font-['Archivo'] font-bold text-4xl lg:text-5xl text-gray-900 mb-4">
+          Impressum
+        </h1>
+        <p class="font-['Archivo'] text-lg text-gray-600">
+          Angaben gemäß § 5 TMG
+        </p>
+      </header>
+
+      <!-- Content -->
+      <div class="font-['Archivo'] text-base leading-relaxed text-gray-900 space-y-8">
+        <!-- Firma -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Anschrift
+          </h2>
+          <p>
+            <strong>Dr.-Ing. Formazin & Partner mbB</strong><br />
+            Architekten & Beratende Ingenieure<br />
+            Dorfstraße 1A<br />
+            16356 Ahrensfelde
+          </p>
+        </section>
+
+        <!-- Vertreten durch -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Vertreten durch
+          </h2>
+          <p>
+            Dr.-Ing. Karsten Formazin<br />
+            Dipl.-Ing. Oda Formazin
+          </p>
+        </section>
+
+        <!-- Kontakt -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Kontakt
+          </h2>
+          <p>
+            Telefon: <a href="tel:+493093691700" class="text-gray-900 hover:underline">030 / 93 69 17 0</a><br />
+            E-Mail: <a href="mailto:kontakt@formazin-partner.de" class="text-gray-900 hover:underline">kontakt@formazin-partner.de</a>
+          </p>
+        </section>
+
+        <!-- Registereintrag -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Registereintrag
+          </h2>
+          <p>
+            Eintragung im Partnerschaftsregister<br />
+            Registergericht: Amtsgericht Frankfurt (Oder)<br />
+            Registernummer: PR [Nummer einfügen]
+          </p>
+        </section>
+
+        <!-- Berufsbezeichnung -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Berufsbezeichnung
+          </h2>
+          <p>
+            Architekt / Beratender Ingenieur<br />
+            (verliehen in der Bundesrepublik Deutschland)
+          </p>
+          <p class="mt-2">
+            Zuständige Kammern:<br />
+            Architektenkammer Brandenburg<br />
+            Baukammer Berlin
+          </p>
+        </section>
+
+        <!-- Verantwortlich für den Inhalt -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Verantwortlich für den Inhalt
+          </h2>
+          <p>
+            Dr.-Ing. Karsten Formazin<br />
+            Dorfstraße 1A<br />
+            16356 Ahrensfelde
+          </p>
+        </section>
+
+        <!-- Haftungsausschluss -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Haftungsausschluss
+          </h2>
+          
+          <h3 class="font-['Archivo'] font-bold text-lg text-gray-900 mb-2 mt-4">
+            Haftung für Inhalte
+          </h3>
+          <p class="mb-4">
+            Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, 
+            Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+          </p>
+
+          <h3 class="font-['Archivo'] font-bold text-lg text-gray-900 mb-2 mt-4">
+            Haftung für Links
+          </h3>
+          <p class="mb-4">
+            Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir 
+            keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr 
+            übernehmen.
+          </p>
+
+          <h3 class="font-['Archivo'] font-bold text-lg text-gray-900 mb-2 mt-4">
+            Urheberrecht
+          </h3>
+          <p>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen 
+            dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art 
+            der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen 
+            Zustimmung des jeweiligen Autors bzw. Erstellers.
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>
+
+  <Footer />
+</Layout>

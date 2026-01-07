@@ -1,0 +1,61 @@
+---
+// Services-Sektion: Was wir tun
+
+const services = [
+  {
+    title: "Architektur",
+    description: "Von der ersten Skizze bis zur Ausführungsplanung. Wir gestalten Räume mit Substanz und Funktion."
+  },
+  {
+    title: "Tragwerksplanung",
+    description: "Statische Berechnungen und konstruktive Durchbildung für Neubau, Umbau und Sanierung."
+  },
+  {
+    title: "Brandschutz",
+    description: "Brandschutzkonzepte und -nachweise für alle Gebäudeklassen. Sicherheit von Anfang an."
+  },
+  {
+    title: "Gutachten & Beratung",
+    description: "Bauphysikalische Gutachten, Bestandsanalysen und technische Beratung für komplexe Projekte."
+  }
+];
+---
+
+<section class="bg-white py-24 lg:py-32">
+  <div class="max-w-din mx-auto px-6 lg:px-12">
+    <!-- Section Header -->
+    <div class="mb-16 lg:mb-20">
+      <h2 class="font-bold text-4xl lg:text-5xl text-construction-grey mb-4">
+        Leistungsspektrum
+      </h2>
+      <p class="font-narrow text-lg uppercase tracking-wide text-signal-grey">
+        Von der Planung bis zur Umsetzung
+      </p>
+    </div>
+
+    <!-- Services Grid (4 Spalten auf Desktop) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      {services.map((service) => (
+        <div class="space-y-4">
+          <!-- Nummerierung (DIN-Style, wie auf einem Plan) -->
+          <div class="font-narrow text-xs uppercase tracking-wider text-signal-grey">
+            {String(services.indexOf(service) + 1).padStart(2, '0')}
+          </div>
+          
+          <!-- Service-Titel -->
+          <h3 class="font-bold text-xl text-construction-grey">
+            {service.title}
+          </h3>
+          
+          <!-- Beschreibung -->
+          <p class="text-gray-600 leading-relaxed">
+            {service.description}
+          </p>
+          
+          <!-- DIN-Linie als Trenner -->
+          <div class="h-px bg-signal-grey/30 mt-6"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import HeroSlider from './react/HeroSlider';
+
+// Platzhalter-Bilder (Architektur/Beton von Unsplash)
+const sliderImages = [
+  'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1920&q=80', // Beton-Architektur
+  'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80', // Moderne Architektur
+  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80', // Glasbau
+];
+---
+
+<section class="relative w-full h-screen overflow-hidden">
+  <!-- Hintergrund-Slider -->
+  <div class="absolute inset-0">
+    <HeroSlider 
+      images={sliderImages} 
+      interval={10000}
+      client:load 
+    />
+  </div>
+
+  <!-- Content Container: Unten Links (Bauplan-Titel) -->
+  <div class="relative z-20 h-full flex items-end p-8 lg:p-12">
+    <div class="max-w-md">
+      <!-- Firmenname (zurückhaltend, wie auf einem Bauplan) -->
+      <h1 class="font-bold text-2xl lg:text-3xl text-white mb-2 leading-tight">
+        Dr.-Ing. Formazin & Partner mbB
+      </h1>
+
+      <!-- Untertitel (diskret) -->
+      <p class="font-narrow text-sm lg:text-base uppercase tracking-wide text-white/80">
+        Architekten & Beratende Ingenieure
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Archivo Variable Font */
+@import "@fontsource-variable/archivo";
+/* Archivo Narrow für technische Metadaten */
+@import "@fontsource/archivo-narrow/400.css";
+@import "@fontsource/archivo-narrow/600.css";
+@import "@fontsource/archivo-narrow/700.css";
+
+/* DIN-Norm Basis-Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F0F2F5; /* Papier-Weiß */
+  color: #1E1E23; /* Konstruktions-Grau */
+}

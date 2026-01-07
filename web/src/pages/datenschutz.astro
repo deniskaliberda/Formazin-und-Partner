@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+const seo = {
+  title: 'Datenschutzerklärung | Dr.-Ing. Formazin & Partner',
+  description: 'Datenschutzerklärung von Dr.-Ing. Formazin & Partner mbB. Informationen zum Umgang mit Ihren personenbezogenen Daten.',
+  robots: 'noindex, follow'
+};
+---
+
+<Layout title={seo.title} description={seo.description} robots={seo.robots}>
+  <article class="bg-white py-16 lg:py-24">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <!-- Header -->
+      <header class="mb-12">
+        <h1 class="font-['Archivo'] font-bold text-4xl lg:text-5xl text-gray-900 mb-4">
+          Datenschutzerklärung
+        </h1>
+        <p class="font-['Archivo'] text-lg text-gray-600">
+          Informationen zum Umgang mit Ihren personenbezogenen Daten
+        </p>
+      </header>
+
+      <!-- Content -->
+      <div class="font-['Archivo'] text-base leading-relaxed text-gray-900 space-y-8">
+        <!-- Einleitung -->
+        <section>
+          <p>
+            Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre 
+            personenbezogenen Daten vertraulich und entsprechend der gesetzlichen 
+            Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+          </p>
+          <p class="mt-4">
+            Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten 
+            möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, 
+            Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, 
+            stets auf freiwilliger Basis.
+          </p>
+        </section>
+
+        <!-- Verantwortliche Stelle -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Verantwortliche Stelle
+          </h2>
+          <p>
+            Verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+          </p>
+          <p class="mt-4">
+            <strong>Dr.-Ing. Formazin & Partner mbB</strong><br />
+            Dorfstraße 1A<br />
+            16356 Ahrensfelde
+          </p>
+          <p class="mt-4">
+            Telefon: <a href="tel:+493093691700" class="text-gray-900 hover:underline">030 / 93 69 17 0</a><br />
+            E-Mail: <a href="mailto:kontakt@formazin-partner.de" class="text-gray-900 hover:underline">kontakt@formazin-partner.de</a>
+          </p>
+        </section>
+
+        <!-- Cookies -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Cookies
+          </h2>
+          <p>
+            Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf 
+            Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, 
+            unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.
+          </p>
+          <p class="mt-4">
+            Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies". 
+            Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben 
+            auf Ihrem Endgerät gespeichert, bis Sie diese löschen.
+          </p>
+        </section>
+
+        <!-- Kontaktformular -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Kontaktformular
+          </h2>
+          <p>
+            Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus 
+            dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks 
+            Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
+          </p>
+          <p class="mt-4">
+            Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+          </p>
+        </section>
+
+        <!-- Server-Log-Files -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Server-Log-Files
+          </h2>
+          <p>
+            Der Provider der Seiten erhebt und speichert automatisch Informationen in so 
+            genannten Server-Log Files, die Ihr Browser automatisch an uns übermittelt. Dies sind:
+          </p>
+          <ul class="list-disc list-inside mt-4 space-y-2 ml-4">
+            <li>Browsertyp und Browserversion</li>
+            <li>verwendetes Betriebssystem</li>
+            <li>Referrer URL</li>
+            <li>Hostname des zugreifenden Rechners</li>
+            <li>Uhrzeit der Serveranfrage</li>
+          </ul>
+          <p class="mt-4">
+            Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser 
+            Daten mit anderen Datenquellen wird nicht vorgenommen.
+          </p>
+        </section>
+
+        <!-- Recht auf Auskunft -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Recht auf Auskunft, Löschung, Sperrung
+          </h2>
+          <p>
+            Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten 
+            personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der 
+            Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser 
+            Daten.
+          </p>
+          <p class="mt-4">
+            Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich 
+            jederzeit unter der im Impressum angegebenen Adresse an uns wenden.
+          </p>
+        </section>
+
+        <!-- Widerspruch Werbe-Mails -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            Widerspruch Werbe-Mails
+          </h2>
+          <p>
+            Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur 
+            Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien 
+            wird hiermit widersprochen.
+          </p>
+          <p class="mt-4">
+            Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der 
+            unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.
+          </p>
+        </section>
+
+        <!-- SSL Verschlüsselung -->
+        <section>
+          <h2 class="font-['Archivo'] font-bold text-2xl text-gray-900 mb-4">
+            SSL-Verschlüsselung
+          </h2>
+          <p>
+            Diese Seite nutzt aus Gründen der Sicherheit und zum Schutz der Übertragung 
+            vertraulicher Inhalte eine SSL-Verschlüsselung. Eine verschlüsselte Verbindung 
+            erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" 
+            wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+          </p>
+        </section>
+
+        <!-- Stand -->
+        <section class="pt-8 border-t border-gray-300">
+          <p class="text-sm text-gray-600">
+            Stand dieser Datenschutzerklärung: Januar 2026
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>
+
+  <Footer />
+</Layout>

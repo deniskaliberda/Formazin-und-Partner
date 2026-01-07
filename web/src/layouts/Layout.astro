@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+
+interface Props {
+	title?: string;
+	description?: string;
+	ogImage?: string;
+	robots?: string;
+}
+
+const { 
+	title = 'Dr.-Ing. Formazin & Partner | Generalplaner Ahrensfelde',
+	description = 'Ingenieurbüro für Tragwerksplanung und Bauphysik in Ahrensfelde. Generalplanung, Statik, Denkmalschutz und innovative Tragwerkslösungen für Berlin und Brandenburg.',
+	ogImage = '/og-image.jpg',
+	robots = 'index, follow'
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString() || 'https://www.formazin-partner.de';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+const fullOgImage = new URL(ogImage, siteUrl);
+---
+
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="robots" content={robots} />
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={fullOgImage} />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={fullOgImage} />
+		
+		<slot name="head" />
+	</head>
+	<body>
+		<Navbar />
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
