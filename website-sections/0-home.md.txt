@@ -1,0 +1,20 @@
+# Section: Homepage (Startseite) - REDUCED DESIGN
+
+## 1. Hero Section (The "Silent" Showcase)
+**Design Goal:** Understatement. Keine Werbung. Pure Architektur.
+**Layout:**
+- **Background:** Fullscreen Slider (Langsame Rotation). Die Bilder müssen für sich sprechen.
+- **Overlay:** KEIN vollflächiges dunkles Overlay, das das Bild "tötet". Nur eine dezente Abdunklung unten oder gar keine (abhängig vom Kontrast).
+- **Text Position:** Absolute Positionierung **unten links** (Bottom-Left) mit Abstand zum Rand (Padding). Wie ein Copyright-Vermerk oder Plan-Titel.
+
+**Typography & Content:**
+- **Headline (H1):** "Dr.-Ing. Formazin & Partner mbB"
+  - *Style:* Archivo Bold, aber KLEIN (z.B. text-xl oder text-2xl). Weiß. Keine Riesen-Buchstaben.
+- **Subline:** "Architekten & Beratende Ingenieure"
+  - *Style:* Archivo Narrow. Weiß. Sachlich.
+
+**Interaction:**
+- Vielleicht ein ganz feiner "Scroll Down" Indikator (ein einfacher Strich oder Pfeil), ganz dezent.
+
+## 2. Intro (Die Vorstellung)
+(Bleibt wie gehabt, aber mit viel Weißraum darüber, damit der Übergang ruhig ist.)

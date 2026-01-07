@@ -1,0 +1,41 @@
+# Section: Projects Overview (Referenzen)
+
+## Design Goal
+Eine "Interactive Gallery", die unsere Baukompetenz feiert.
+**Key Interaction:** "Seamless Shared Layout Transition".
+Wenn ein Nutzer auf eine Projekt-Karte klickt, soll sich diese Karte organisch zur Detailseite "ausdehnen" (expand). Keine harte Ladeunterbrechung.
+
+## Layout Structure
+1.  **Header:**
+    - Headline: "Ausgewählte Referenzen"
+    - Subline: "Wohnungsbau. Öffentliche Bauten. Gewerbe." (Filterbare Kategorien).
+    - **Interaction:** Die Filter-Buttons sollen wie "Reiter" auf einer Akte aussehen (Referenz an Planungsunterlagen), aber modern animiert.
+
+2.  **The Project Grid (Das Herzstück):**
+    - Layout: Masonry-Grid (versetztes Raster) oder BENTO-Grid (unterschiedlich große Boxen), um Spannung zu erzeugen.
+    - **Inhalt pro Karte:**
+        - Hochwertiges Foto (Thumbnail).
+        - Titel (z.B. "Neubau Kita Ahrensfelde").
+        - Kategorie & Jahr (z.B. "Öffentlich | 2024").
+        - Location (z.B. "Barnim").
+
+## Animation Specs (Für Framer Motion)
+- **Hover State:**
+    - Das Bild zoomt ganz sanft (Scale 1.05).
+    - Ein Overlay mit der Akzentfarbe (Formazin-Blau, 90% Transparenz) fährt von unten rein.
+    - Text: "Projekt ansehen ->" erscheint.
+- **Click Transition (The "Cool" Part):**
+    - Nutze `layoutId` in Framer Motion.
+    - Das Thumbnail der Übersicht wird zum Hero-Image der Detailseite.
+    - Der Übergang muss "heavy" und "smooth" wirken (physikalische Dämpfung), nicht hektisch.
+
+## Content Examples (Placeholder Data)
+Bitte Platzhalter für folgende Projekttypen vorsehen (gemäß Projektplan):
+1.  **Öffentlich:** "Feuerwehrhaus Erweiterung" (Substanz, Beton, Funktion).
+2.  **Wohnen:** "Mehrfamilienhaus Berlin" (Ästhetik, Leben).
+3.  **Sanierung:** "Denkmalschutz Gutshaus" (Detailverliebtheit, Dr.-Ing. Kompetenz).
+4.  **Gewerbe:** "Produktionshalle" (Stahlbau, Weite).
+
+## Tech Stack Note
+- Nutze `Astro` Content Collections für die Datenbasis.
+- Nutze `React` Inseln für das Grid, um die Interaktivität zu gewährleisten.

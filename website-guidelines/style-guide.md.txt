@@ -1,0 +1,62 @@
+# DIN SPEC 2025: Digital Design System (Formazin & Partner)
+
+## 1. Design-Philosophie: "Das digitale Planungsraster"
+Das Design folgt der Logik eines DIN-A-Bauplans.
+- **Raster:** Absolut striktes Grid. Elemente fluchten immer an Kanten.
+- **Hierarchie:** Informationen werden wie in einem Plankopf (Title Block) strukturiert.
+- **Ästhetik:** "White Aluminium" statt Reinweiß. Papier-Haptik statt Digital-Glow.
+
+## 2. Typografie (Gemäß CD-Vorgabe)
+[cite_start]Wir nutzen **Archivo** (Variable Font), um die technische Präzision des Logos aufzugreifen.
+
+**Schriftart-Familie:**
+- Primary: `Archivo` (Google Fonts / Fontsource)
+- [cite_start]Alternative für Tabellen/Daten: `Archivo Narrow` (wie im Briefkopf [cite: 331]).
+
+**Hierarchie & Stile:**
+- **H1 (Hero):** Archivo Black/Bold, Uppercase (VERSALIEN). Tracking (Letter-spacing) leicht erhöht (+0.02em). Wirkt wie ein Stempel.
+- **H2 (Sektionen):** Archivo Bold.
+- **H3 (Karten-Titel):** Archivo SemiBold.
+- **Body:** Archivo Regular. Hohe Lesbarkeit, Zeilenhöhe 1.5 (DIN-Standard für Lesbarkeit).
+- **Meta-Daten (Datum, Ort):** Archivo Narrow, Uppercase. Wie technische Datenblätter.
+
+## 3. Farb-Norm (Color Codes)
+[cite_start]Basierend auf dem "Mini Corporate Design"  [cite_start]und dem Projektplan[cite: 370].
+
+**Palette:**
+- [cite_start]**DIN-Blau (Primary):** `rgb(45, 65, 150)` (Hex: #2D4196).
+    - *Einsatz:* Interaktionselemente, aktive Zustände, feine Linien.
+- **Konstruktions-Grau (Dark):** `rgb(30, 30, 35)` (Fast Schwarz, für Text).
+- **Papier-Weiß (Background):** `rgb(240, 242, 245)` (Hex: #F0F2F5).
+    - *Vibe:* "Weißaluminium" / Technisches Papier. Kein blendendes Reinweiß.
+- [cite_start]**Signal-Grau (Secondary):** `rgb(157, 157, 157)`.
+    - *Einsatz:* Inaktive Elemente, Metadaten.
+
+## 4. Raster & Layout (The DIN Grid)
+Wir nutzen ein 12-Spalten-Raster mit harten Kanten.
+
+- **Container:** Max-Width 1440px (DIN A0 quer gedacht).
+- **Spacing:** Wir nutzen ein 4px-Basismodul (rem-basiert).
+    - Abstände sind immer Vielfache von 4 (16px, 32px, 64px).
+- **Linien:** Feine Trennlinien (1px solid #E5E7EB) trennen Sektionen, ähnlich wie Faltlinien auf einem Plan.
+
+## 5. Komponenten-Spezifikationen
+
+**A. Die "Projekt-Kartei" (Card)**
+- Kein Schatten (Flat).
+- 1px Border in Signal-Grau.
+- Bildformat: 4:3 oder 3:2 (Klassische Foto-Formate).
+- Typo steht *unter* dem Bild, sauber linksbündig ausgerichtet wie in einer Legende.
+
+**B. Buttons & Tags**
+- **Buttons:** Rechteckig (Border-Radius: 0px oder max. 2px). Wirkt wie ein gestanztes Blech oder ein Aufkleber.
+- **Tags (Kategorien):** Outline-Style. Wirkt wie ein Stempel ("GEPRÜFT").
+
+**C. Animationen (Physik)**
+- Keine "bouncy" Effekte.
+- **Transitionen:** Linear oder "Ease-Out-Cubic". Präzise und schnell (0.2s - 0.3s).
+- **Hero-Slider:** Langsame Bewegung ("Kamerafahrt"), kein hektischer Schnitt.
+
+## 6. UI-Elemente aus dem CD
+- [cite_start]Nutzung der "Schutzzone"  als Whitespace-Regel um das Logo.
+- Das Logo steht immer links oben oder zentriert, unverrückbar wie auf einem Briefkopf.
