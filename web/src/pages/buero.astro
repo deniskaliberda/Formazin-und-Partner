@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import ImageCarousel from '../components/react/ImageCarousel';
+import teamPhoto from '../assets/team-formazin.png';
 
 const seo = {
   title: 'Das Büro | Dr.-Ing. Formazin & Partner',
@@ -71,10 +72,10 @@ const workImages = [
   <section class="relative w-full">
     <!-- Group Image -->
     <div class="w-full h-[60vh] lg:h-[70vh] bg-gray-300 relative overflow-hidden">
-      <img 
-        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=2000&q=80" 
+      <img
+        src={teamPhoto.src}
         alt="Team Dr.-Ing. Formazin & Partner"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover scale-105"
       />
       <!-- Gradient Overlay for Text Readability -->
       <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
@@ -149,9 +150,9 @@ const workImages = [
             „Geiht nich – gifft nich."
           </p>
           <p class="font-['Archivo'] text-xl leading-relaxed text-gray-700 max-w-3xl">
-            Was als Partnerschaft begann, wächst nun in die nächste Generation. 
-            Tradition wahren. Digitalisierung vorantreiben. Handwerkliches Wissen 
-            mit moderner Technologie verbinden.
+            Offenheit und Freude an der Umsetzung von Projekten prägen unsere
+            Firmenkultur seit über 30 Jahren. Wir hinterfragen, lernen und entwickeln
+            uns weiter. Denn nur wer offen bleibt, kann wirklich gute Lösungen finden.
           </p>
         </div>
 

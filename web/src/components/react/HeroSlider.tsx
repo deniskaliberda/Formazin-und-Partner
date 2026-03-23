@@ -4,8 +4,13 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
+interface SliderImage {
+  src: string;
+  srcSet?: string;
+}
+
 interface HeroSliderProps {
-  images: string[];
+  images: SliderImage[];
   interval?: number;
   className?: string;
 }
@@ -40,7 +45,9 @@ export default function HeroSlider({
           className="absolute inset-0"
         >
           <img
-            src={images[currentIndex]}
+            src={images[currentIndex].src}
+            srcSet={images[currentIndex].srcSet}
+            sizes="100vw"
             alt={`Slide ${currentIndex + 1}`}
             className="w-full h-full object-cover"
             loading="eager"

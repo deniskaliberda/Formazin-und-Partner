@@ -1,5 +1,6 @@
 ---
 // Intro-Sektion: Editorial Design mit Split-Screen Layout
+import teamPhoto from '../assets/team-formazin.png';
 ---
 
 <section class="bg-white py-24 lg:py-32">
@@ -8,43 +9,49 @@
       <!-- Links: Text (Editorial Style) -->
       <div class="space-y-8">
         <h2 class="font-bold text-4xl lg:text-5xl text-construction-grey leading-tight">
-          Verantwortung über Generationen
+          Seit 1990. Für Menschen.
         </h2>
-        
+
         <div class="space-y-6 text-lg text-gray-700 leading-din">
           <p>
-            Seit über 30 Jahren steht unser Name für substanzielle Ingenieursarbeit. 
-            Als familiengeführtes Büro verbinden wir technische Präzision mit der 
-            Erfahrung mehrerer Generationen.
+            Seit 1990 gestalten wir Räume für Menschen – mit Kreativität,
+            Fachkompetenz und dem Anspruch, Bleibendes zu schaffen.
           </p>
-          
+
           <p>
-            Unser Leitsatz <em>"Geiht nich – gifft nich!"</em> ist mehr als ein Motto. 
-            Es ist die Haltung, mit der wir jede Herausforderung angehen: pragmatisch, 
-            lösungsorientiert und mit dem Anspruch, dass am Ende ein tragfähiges 
-            Ergebnis steht.
+            Als familiäres Unternehmen stehen wir seit über drei Jahrzehnten
+            für eines: partnerschaftliche Zusammenarbeit auf Augenhöhe – mit
+            unseren Auftraggebern und allen am Bau Beteiligten. Was einst im
+            kleinen Kreis begann, ist heute ein gewachsenes Team in der dritten
+            Generation. Neue Ideen und Perspektiven haben uns weiterentwickelt –
+            unseren Anspruch jedoch nie verändert: Räume zu schaffen die überzeugen
+            und Auftraggeber, die sich von Anfang bis Ende gut aufgehoben fühlen.
           </p>
-          
+
           <p>
-            Von der Tragwerksplanung über Bauphysik bis zur Projektsteuerung – 
-            wir begleiten Bauvorhaben vom ersten Strich auf dem Plan bis zur 
-            erfolgreichen Übergabe.
+            Unsere langjährige Erfahrung und umfassende Fachkompetenz ermöglichen
+            es uns, komplexe Bauprojekte ganzheitlich zu begleiten – von der ersten
+            Idee bis zur fertigen Umsetzung.
+          </p>
+
+          <p>
+            <strong>Wer uns vertraut, weiß: Wir geben alles für ein gutes Ergebnis.</strong>
           </p>
         </div>
       </div>
 
-      <!-- Rechts: Platzhalter für Gruppenfoto -->
+      <!-- Rechts: Teamfoto -->
       <div class="relative">
         <div class="aspect-[3/4] bg-gray-200 relative overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" 
-            alt="Team Formazin & Partner" 
-            class="w-full h-full object-cover grayscale"
+          <img
+            src={teamPhoto.src}
+            alt="Team Formazin & Partner"
+            class="w-full h-full object-cover scale-110"
           />
           <!-- Feine Randlinie (DIN-Style) -->
           <div class="absolute inset-0 border border-signal-grey pointer-events-none"></div>
         </div>
-        
+
         <!-- Caption (wie bei Architekturfotos) -->
         <p class="font-narrow text-xs uppercase tracking-wide text-signal-grey mt-4">
           Team Formazin & Partner / Berlin-Brandenburg

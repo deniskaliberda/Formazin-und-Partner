@@ -1,12 +1,17 @@
 ---
 import HeroSlider from './react/HeroSlider';
 
-// Platzhalter-Bilder (Architektur/Beton von Unsplash)
-const sliderImages = [
-  'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1920&q=80', // Beton-Architektur
-  'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80', // Moderne Architektur
-  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80', // Glasbau
+// Platzhalter-Bilder (Architektur/Beton von Unsplash) mit responsive srcSets
+const baseImages = [
+  'https://images.unsplash.com/photo-1487958449943-2429e8be8625', // Beton-Architektur
+  'https://images.unsplash.com/photo-1503387762-592deb58ef4e', // Moderne Architektur
+  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab', // Glasbau
 ];
+
+const sliderImages = baseImages.map(url => ({
+  src: `${url}?w=1920&q=85`,
+  srcSet: `${url}?w=640&q=85 640w, ${url}?w=1280&q=85 1280w, ${url}?w=1920&q=85 1920w`,
+}));
 ---
 
 <section class="relative w-full h-screen overflow-hidden">
